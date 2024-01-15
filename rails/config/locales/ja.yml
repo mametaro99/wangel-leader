@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      hiking_plan: ハイキング計画
+    attributes:
+      hiking_plan:
+        user: ユーザー
+        mountain_name: 山の名前
+        title: タイトル
+        start_date: 開始日
+        end_date: 終了日
+        status: ステータス
