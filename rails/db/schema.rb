@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_15_112253) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_15_123757) do
   create_table "hiking_plans", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "mountain_name", null: false
-    t.string "title", null: false
-    t.date "start_date", null: false
-    t.date "end_date", null: false
+    t.bigint "user_id"
+    t.string "mountain_name"
+    t.string "title"
+    t.date "start_date"
+    t.date "end_date"
     t.integer "status", comment: "ステータス（10:未保存, 20:下書き, 30:公開中）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
