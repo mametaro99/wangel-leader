@@ -4,12 +4,11 @@ class HikingPlan < ApplicationRecord
   validates :title, :mountain_name, :status, presence: true, if: :published?
   validate :verify_only_one_unsaved_status_is_allowed
 
-   private
+  private
 
-     def verify_only_one_unsaved_status_is_allowed
-       if unsaved? && user.hiking_plans.unsaved.present?
-         raise StandardError, "未保存の計画は複数保有できません"
-       end
-     end
-
+    def verify_only_one_unsaved_status_is_allowed
+      if unsaved? && user.hiking_plans.unsaved.present?
+        raise StandardError, "未保存の計画は複数保有できません"
+      end
+    end
 end

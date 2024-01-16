@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       namespace :current do
         resource :user, only: [:show]
       end
+      resources :hiking_plans, only: [:index, :show]
     end
   end
 end
