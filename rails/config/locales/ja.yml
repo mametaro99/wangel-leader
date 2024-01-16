@@ -10,3 +10,9 @@ ja:
         start_date: 開始日
         end_date: 終了日
         status: ステータス
+  enums:
+     hiking_plan:
+       status:
+         unsaved: 未保存
+         draft: 下書き
+         published: 公開中
