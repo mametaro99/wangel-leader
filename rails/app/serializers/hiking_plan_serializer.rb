@@ -1,11 +1,11 @@
 class HikingPlanSerializer < ActiveModel::Serializer
   attributes :id, :mountain_name, :title, :start_date, :end_date, :status, :created_at, :from_today
   belongs_to :user, serializer: UserSerializer
-  
+
   def status
     object.status_i18n
   end
-  
+
   def created_at
     object.created_at.strftime("%Y/%m/%d")
   end
